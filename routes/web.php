@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PatientsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 
 /*
@@ -32,16 +33,32 @@ Route::get('/admin/layouts', function () {
     return view('layouts.default');
 });
 
-Route::get('/admin/dashboard', function () {
-    return view('admin.dashboard');
-});
 
-Route::get('/admin/news', function () {
-    return view('admin.news');
-});
+
+
 Route::get('/logout', function () {
     return view('index');
 });
+
+
+/** Admin Route **/
+Route::prefix('admin')->group(function (){
+    Route::get('/login',[AdminController::class,'index'])->name('admin.login');
+    Route::post('/login',[AdminController::class,'store'])->name('
+    admin.login');
+
+    Route::get('/dashboard',[AdminController::class,'dashboard'])
+    ->name('admin.dashboard')->middleware('admin');
+
+    Route::get('/admin/news',[AdminController::class,'news'])->middleware('admin');
+
+    
+
+    Route::get('/logout',[AdminController::class,'AdminLogout'])
+    ->name('admin.logout')->middleware('admin');
+
+});
+
 
 
 Route::get('/redirects',[HomeController::class,'index']);

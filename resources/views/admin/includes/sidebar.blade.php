@@ -15,22 +15,9 @@
                 <a href="javascript:void(0);" class="bars"></a>
                 <a class="navbar-brand" href="home.php" style="color: #fff;">MeroCare  Dashboard</a>
                 <ul class = "nav navbar-right"> 
-                <li class = "dropdown">
-                    <a class = "user dropdown-toggle" data-toggle = "dropdown" href = "#" style="color: #fff;">
-                        <span class = "glyphicon glyphicon-user" style="color: #fff;"></span>
-                        <b class = "caret"></b>
-                    </a>                    <?php echo "man"; ?>
+                <li> <a href="{{ route('admin.logout')}}"><span> <i class="fas fa-unluck-alt"></i> </span>Logout </a> </li>     
 
-                    <!-- Authentication -->
-                    <form method="POST" action="{{ url('/') }}/index">
-                        @csrf
-
-                        <x-dropdown-link :href="route('logout')"
-                                onclick="event.preventDefault();
-                                            this.closest('form').submit();">
-                            {{ __('Log Out') }}
-                        </x-dropdown-link>
-                    </form>
+                    
                 </li>
             </ul>
             </div>
@@ -48,7 +35,7 @@
                     </li>
                    
                             <li>
-                               <a href="{{ url('/')}}/admin/news">
+                               <a href="{{ url('/')}}/admin.news">
                                <i class="glyphicon glyphicon-plus"></i> &nbsp;&nbsp; 
                                 News Menu    </a>
                             </li>
