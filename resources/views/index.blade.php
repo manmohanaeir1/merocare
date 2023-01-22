@@ -36,14 +36,23 @@
 				<li><a href="#doctor">Doctors</a></li>
 				<li><a href="#facilities">Facilities</a></li>
 				<li><a href="#pricing">Pricing</a></li>
-				<li class="dropdown">
-				  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right">Extra</span>More <b class="caret"></b></a>
-				  <ul class="dropdown-menu">
-					<li><a href="index.html">Home form</a></li>
-					<li><a href="index-video.html">Home video</a></li>
-					<li><a href="index-cta.html">Home CTA</a></li>
-					<li><a href="https://bootstrapmade.com">Download</a></li>
-				  </ul>
+				
+				<li> @if (Route::has('login'))
+                    <li>
+				@auth
+					<a href="{{ url('/dashboard') }}" class="">Dashboard</a></li>
+				@else
+                <li>
+					<a href="{{ route('login') }}" class="">Log in</a></li>
+                    <li>
+					@if (Route::has('register'))
+						<a href="{{ route('register') }}" class="">Register</a>
+    </li>
+                        @endif
+				@endauth
+		
+		@endif</li>
+
 				</li>
 			  </ul>
             </div>
