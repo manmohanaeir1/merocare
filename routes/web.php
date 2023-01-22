@@ -17,9 +17,15 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+<<<<<<< HEAD
 Route::get('/home', function () {
     return view('index');
 });
+=======
+// Route::get('/home', function () {
+//     return view('index');
+// });
+>>>>>>> 30b545607f19e90ecd0f337bf137ed0267950f8b
 
 
 Route::get('/', [PatientsController::class, 'index']);
@@ -41,6 +47,14 @@ Route::get('/admin/news', function () {
     return view('admin.news');
 });
 
+<<<<<<< HEAD
+=======
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
+>>>>>>> 30b545607f19e90ecd0f337bf137ed0267950f8b
 Route::get('/redirects',[HomeController::class,'index']);
 
 Route::get('/dashboard', function () {
