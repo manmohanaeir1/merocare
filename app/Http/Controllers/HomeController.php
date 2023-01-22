@@ -15,7 +15,7 @@ class HomeController extends Controller
     $role=Auth::user()->role;
     if($role=="1")
     {
-        return view('admin');
+        return view('admin.layouts.default');
     }
 if($role=="0")
 {

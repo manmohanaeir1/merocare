@@ -39,6 +39,10 @@ Route::get('/admin/dashboard', function () {
 Route::get('/admin/news', function () {
     return view('admin.news');
 });
+Route::get('/logout', function () {
+    return view('index');
+});
+
 
 Route::get('/redirects',[HomeController::class,'index']);
 

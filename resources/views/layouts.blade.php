@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Health niche</title>
+    <title> MeroCare</title>
 	
     <!-- css -->
     <link href="/assest/css/bootstrap.min.css" rel="stylesheet" type="text/css">

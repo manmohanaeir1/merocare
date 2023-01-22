@@ -21,11 +21,16 @@
                         <b class = "caret"></b>
                     </a>                    <?php echo "man"; ?>
 
-                <ul class = "dropdown-menu">
-                    <li>
-                        <a class = "me" href = "logout.php" onclick="if(confirm('Logging out, Thank you and see you soon Admin!') == 0){return false;}"><i class = "glyphicon glyphicon-log-out"></i> Logout</a>
-                    </li>
-                </ul>
+                    <!-- Authentication -->
+                    <form method="POST" action="{{ url('/') }}/index">
+                        @csrf
+
+                        <x-dropdown-link :href="route('logout')"
+                                onclick="event.preventDefault();
+                                            this.closest('form').submit();">
+                            {{ __('Log Out') }}
+                        </x-dropdown-link>
+                    </form>
                 </li>
             </ul>
             </div>
