@@ -22,4 +22,21 @@ use App\Http\Controllers\PatientsController;
 Route::get('/', [PatientsController::class, 'index']);
 Route::post('/', [PatientsController::class, 'store']);
 
+//admin
+
+Route::get('/admin/layouts', function () {
+    return view('layouts.default');
+});
+
+
+
+Route::get('/admin/dashboard', function () {
+    return view('admin.dashboard');
+});
+
+Route::get('/admin/news', function () {
+    return view('admin.news');
+});
+
+
 
