@@ -1,7 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\PatientsController;
+=======
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\HomeController;
+
+>>>>>>> dcd5c53d3a6a5aa581458d605566358cd7afa267
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +20,7 @@ use App\Http\Controllers\PatientsController;
 |
 */
 
+<<<<<<< HEAD
 // Route::get('/home', function () {
 //     return view('index');
 // });
@@ -40,3 +47,21 @@ Route::get('/admin/news', function () {
 
 
 
+=======
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/redirects',[HomeController::class,'index']);
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
+>>>>>>> dcd5c53d3a6a5aa581458d605566358cd7afa267
