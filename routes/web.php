@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -53,3 +55,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+>>>>>>> b0a33db39580d57967d3fc5df00479e00936d31b
