@@ -88,7 +88,7 @@
 									<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Make an appoinment <small>(It's free!)</small></h3>
 									</div>
 									<div class="panel-body">
-									<form role="form" class="lead" method="post" action="{{url('/')}}/index">
+									<form role="form" class="lead" method="post" action="{{url('/')}}">
 										
 									@csrf
 									<div class="row">

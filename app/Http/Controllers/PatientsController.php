@@ -14,7 +14,8 @@ class PatientsController extends Controller
      */
     public function index()
     {
-        //
+        $patients = Patients::all();
+        return view('index', compact('patients'));
     }
 
     /**
@@ -24,7 +25,8 @@ class PatientsController extends Controller
      */
     public function create()
     {
-        //
+            $patients = new Patients();
+
     }
 
     /**
@@ -35,7 +37,16 @@ class PatientsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $patients = new Patients();
+        $patients->first_name = $request->first_name;
+        $patients->last_name = $request->last_name;
+        $patients->age = $request->age;
+        $patients->address = $request->address;
+        $patients->email = $request->email;
+        $patients->phone_number = $request->phone_number;
+        $patients->save();
+        return redirect('/');
+
     }
 
     /**
