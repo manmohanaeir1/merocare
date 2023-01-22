@@ -1,13 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
 use App\Http\Controllers\PatientsController;
-=======
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 
->>>>>>> dcd5c53d3a6a5aa581458d605566358cd7afa267
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +17,6 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-<<<<<<< HEAD
 // Route::get('/home', function () {
 //     return view('index');
 // });
@@ -47,7 +43,6 @@ Route::get('/admin/news', function () {
 
 
 
-=======
 Route::get('/', function () {
     return view('welcome');
 });
@@ -64,4 +59,3 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
->>>>>>> dcd5c53d3a6a5aa581458d605566358cd7afa267
