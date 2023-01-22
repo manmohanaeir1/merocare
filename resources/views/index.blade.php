@@ -37,21 +37,22 @@
 				<li><a href="#facilities">Facilities</a></li>
 				<li><a href="#pricing">Pricing</a></li>
 				
-				<li> @if (Route::has('login'))
+				{{-- <li> @if (Route::has('login'))
                     <li>
 				@auth
 					<a href="{{ url('/dashboard') }}" class="">Dashboard</a></li>
-				@else
+				@else --}}
                 <li>
 					<a href="{{ route('login') }}" class="">Log in</a></li>
                     <li>
 					@if (Route::has('register'))
 						<a href="{{ route('register') }}" class="">Register</a>
     </li>
-                        @endif
+                        {{-- @endif --}}
 				@endauth
 		
-		@endif</li>
+		{{-- @endif --}}
+	</li>
 
 				</li>
 			  </ul>
