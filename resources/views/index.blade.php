@@ -43,15 +43,14 @@
 					<a href="{{ url('/dashboard') }}" class="">Dashboard</a></li>
 				@else --}}
                 <li>
-					<a href="{{ route('login') }}" class="">Log in</a></li>
+					<a href="{{ url('admin/login') }}" class="">Log in</a></li>
                     <li>
-					@if (Route::has('register'))
-						<a href="{{ route('register') }}" class="">Register</a>
+						<a href="{{ url('admin/register') }}" class="">Register</a>
     </li>
-                        {{-- @endif --}}
-				@endauth
+                    
+			
 		
-		{{-- @endif --}}
+		
 	</li>
 
 				</li>
